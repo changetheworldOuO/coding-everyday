@@ -41,14 +41,15 @@ function renameFile() {
           console.error(`-> 文件：${file} 重命名报错: ${err} \n`);
           return;
         }
+		// counter++; // 计数器加1 不太理解为啥这里不能执行++
         console.log(`-> 文件："${file}" 重命名为 "${newFileName}" 成功！`);
       });
     }
   });
 }
 
-readlineWay.question('-> 请输入需要重命名的文件夹路径：', function (dirway) {
-  directoryPath = path.join(dirway);
+readlineWay.question('-> 请输入需要重命名的文件夹路径：', function (dirWay) {
+  directoryPath = path.join(dirWay);
   // 二次输入
   readlineWay.question('-> 请输入文件名前缀：', function (filePrefix) {
     prefix = filePrefix;
