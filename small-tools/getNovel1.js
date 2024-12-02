@@ -9,7 +9,7 @@ const startUrl = 'https://www.uuks5.com/book/781417/422378169.html';
 const preUrl = 'https://www.uuks5.com/book/781417/';
 const EndUrl = ''; // 截止到某一章，调试用
 const downloadedChaptersFile = 'downloaded_chapters1.json'; // 已下载章节的记录文件
-const bookName = '开局合欢宗-被师姐拿捏命脉-未删减版.txt'; // 书名
+const bookName = '开局合欢宗-被师姐拿捏命脉-未删减原始版.txt'; // 书名
 
 // ---------------------------- 变量 ---------------------------- //
 // 存储所有章节内容的数组

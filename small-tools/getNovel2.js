@@ -9,7 +9,7 @@ const cryptoJS = require('crypto-js');
 const startUrl = 'https://read.zongheng.com/chapter/1286982/73595075.html';
 const preUrl = 'https://read.zongheng.com';
 const EndUrl = ''; // 截止到某一章，调试用
-const bookName = '开局合欢宗-被师姐拿捏命脉-最新更新版.txt';
+const bookName = '开局合欢宗-被师姐拿捏命脉-纵横最新版.txt';
 // 已下载章节的记录文件
 const downloadedChaptersFile = 'downloaded_chapters2.json';
 
