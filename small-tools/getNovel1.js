@@ -14,12 +14,12 @@ const bookName = '开局合欢宗-被师姐拿捏命脉-未删减原始版.txt';
 // ---------------------------- 变量 ---------------------------- //
 // 存储所有章节内容的数组
 let allChaptersContent = [];
-let preText = `-------------------------------------------------------
-Name:   | 《开局合欢宗，被师姐拿捏命脉》
-Author: |  咸鱼老白
-Maker:  |  达不溜
-Date:   |  2024-12-02
--------------------------------------------------------
+let preText = `---------------------------------------------
+Name:  《开局合欢宗，被师姐拿捏命脉》
+Author:   咸鱼老白
+Maker:    达不溜
+Date:     2024-12-02
+---------------------------------------------
 
 `;
 
@@ -91,7 +91,7 @@ async function fetchChapterContent(url) {
 // 保存所有章节内容到文件
 function saveToFile() {
   // 每章之间用分隔符分隔
-  let novelContent = preText + allChaptersContent.map((i) => i + '\n\n ------------------------------------------------------- \n\n').join('');
+  let novelContent = preText + allChaptersContent.map((i) => i + '\n\n---------------------------------------------\n\n').join('');
   fs.appendFileSync(bookName, novelContent, 'utf8');
 
   console.log(`------ 小说已更新！！！追加到 ${bookName}`);
