@@ -4,22 +4,18 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 const path = require('path');
 
-const myData = require('../data/my-data');
+const myData = require('../data/my-const-data');
 const localData = JSON.parse(JSON.stringify(myData)); // 深拷贝数据对象
 
 // ---------------------------- 常量 ---------------------------- //
 // 获取常量信息
+// 开始 url, 前置url, 终止url, 记录下载章节，书名，联网Cookie信息
 const { startUrl, preUrl, endUrl, downloadedChaptersFile, bookName, uuks5NetData } = localData.uuks5NovelData;
+// 前置介绍词
 let { preText } = localData.uuks5NovelData;
+// 文件下载和读取的完整路径
 let downloadedChapterFilePath = path.join(__dirname, '..', 'data', downloadedChaptersFile);
 let saveNovelFilePath = path.join(__dirname, '..', 'novel', bookName);
-
-// 小说的起始URL
-// const startUrl = 'https://www.uuks5.com/book/781417/422378169.html';
-// const preUrl = 'https://www.uuks5.com/book/781417/';
-// const endUrl = ''; // 截止到某一章，调试用
-// const downloadedChaptersFile = 'downloaded_chapters1.json'; // 已下载章节的记录文件
-// const bookName = '开局合欢宗-被师姐拿捏命脉-未删减原始版.txt'; // 书名
 
 // ---------------------------- 变量 ---------------------------- //
 // 存储所有章节内容的数组
@@ -35,7 +31,6 @@ const uuks5Session = axios.create({
 
 // 读取已下载章节的记录
 let downloadedChapters = [];
-
 if (fs.existsSync(downloadedChapterFilePath)) {
   const data = fs.readFileSync(downloadedChapterFilePath, 'utf8');
   downloadedChapters = JSON.parse(data);
@@ -59,6 +54,7 @@ async function goNextPage(chapterTitle, url, nextHref) {
   // 判断
   if (nextHref !== 'javascript:' && !urlsArray.includes(nextChapterLink) && nextChapterLink !== endUrl) {
     // 如果存在下一章链接且未下载过，继续递归获取下一章
+    await new Promise((resolve) => setTimeout(resolve, 1000)); // 每个请求之间延迟2秒
     await fetchChapterContent(nextChapterLink);
   } else {
     // 所有章节都下载完毕，保存到文件
@@ -93,12 +89,17 @@ async function fetchChapterContent(url) {
     // 获取下一页
     goNextPage(chapterTitle, url, $('#nextChapterBottom').attr('href'));
   } catch (error) {
+    // 先保存
+    saveToFile();
     console.error(`请求失败: ${error.message}`);
   }
 }
 
 // 保存所有章节内容到文件
 function saveToFile() {
+  if (allChaptersContent.length === 0 || downloadedChapters.length === 0) {
+    return;
+  }
   // 每章之间用分隔符分隔
   let novelContent = preText + allChaptersContent.map((i) => i + '\n\n---------------------------------------------\n\n').join('');
   fs.appendFileSync(saveNovelFilePath, novelContent, 'utf8');

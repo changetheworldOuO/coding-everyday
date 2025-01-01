@@ -5,13 +5,16 @@ const fs = require('fs');
 const path = require('path');
 const cryptoJS = require('crypto-js');
 
-const myData = require('../data/my-data');
+const myData = require('../data/my-const-data');
 const localData = JSON.parse(JSON.stringify(myData)); // 深拷贝数据对象
 
 // ---------------------------- 常量 ---------------------------- //
 // 获取常量信息
+// 开始 url, 前置url, 终止url, 记录下载章节，书名，联网Cookie信息
 const { startUrl, preUrl, endUrl, downloadedChaptersFile, bookName, zonghengNetData } = localData.zonghengNovelData;
+// 前置介绍词
 let { preText } = localData.zonghengNovelData;
+// 文件下载和读取的完整路径
 let downloadedChapterFilePath = path.join(__dirname, '..', 'data', downloadedChaptersFile);
 let saveNovelFilePath = path.join(__dirname, '..', 'novel', bookName);
 
@@ -56,11 +59,13 @@ function getFreeData(contentDiv, totalDiv) {
 
 // 获取免费data
 function getPayData(secretText) {
-  let data1 = secretText.split('|')[1].trim();
-  let data2 = secretText.split('|')[2].trim();
+  // let data1 = secretText.split('|')[1].trim();
+  // let data2 = secretText.split('|')[2].trim();
   let data0 = secretText.split('|')[0].trim().replace(/\n|\r/g, '');
 
+  // 有可能之后再拉取，需要再次获取 words的值
   let e = zonghengNetData.eData;
+  // 解码
   let r = cryptoJS.AES.decrypt(data0, e, {
     mode: cryptoJS.mode.ECB,
     padding: cryptoJS.pad.Pkcs7
@@ -98,6 +103,7 @@ async function goNextPage(chapterTitle, url, nextHref) {
   // 判断下一章
   if (nextHref !== 'javascript:;' && !urlsArray.includes(nextChapterLink) && nextChapterLink !== endUrl) {
     // 如果存在下一章链接且未下载过，继续递归获取下一章
+    // await new Promise((resolve) => setTimeout(resolve, 200)); // 每个请求之间延迟2秒
     await fetchChapterContent(nextChapterLink);
   } else {
     // 所有章节都下载完毕，保存到文件
@@ -135,12 +141,17 @@ async function fetchChapterContent(url) {
     // 获取下一页
     goNextPage(chapterTitle, url, $('div.nav-btn-group a:last').attr('href'));
   } catch (error) {
+    // 先保存
+    saveToFile();
     console.error(`请求失败: ${error.message}`);
   }
 }
 
 // 保存所有章节内容到文件
 function saveToFile() {
+  if (allChaptersContent.length === 0 || downloadedChapters.length === 0) {
+    return;
+  }
   // 每章之间用分隔符分隔
   let novelContent = preText + allChaptersContent.map((i) => i + '\n\n---------------------------------------------\n\n').join('');
   fs.appendFileSync(saveNovelFilePath, novelContent, 'utf8');
