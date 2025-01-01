@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
 
-const getNovelUUks5 = require('modules/getNovel-uukst');
-const getNovelZongHeng = require('modules/getNovel-zongheng');
+const getNovelUUks5 = require('./modules/getNovel-uuks5');
+const getNovelZongHeng = require('./modules/getNovel-zongheng');
 
 // 创建读取行接口
 const readlineWay = readline.createInterface({
@@ -12,13 +12,17 @@ const readlineWay = readline.createInterface({
 });
 
 readlineWay.question('-> 【请输入需要爬取的小说网站 1: uuks5 2: 纵横】 : ', function (choose1) {
-  // 二次输入
-  if (Number(choose1) === 1) {
-    getNovelUUks5.startGetNovel();
-  } else if (Number(choose1) === 2) {
-    getNovelZongHeng.startGetNovel();
-  }
+  let chooseObj = {
+    1: 'uuks5',
+    2: 'zongheng'
+  };
+  let funObj = {
+    'uuks5': getNovelUUks5.startGetNovel,
+    'zongheng': getNovelZongHeng.startGetNovel
+  };
 
+  // 执行爬取
+  funObj[chooseObj[choose1]]();
   readlineWay.close(); // 关闭
 });
 

@@ -1,55 +1,78 @@
 // 常量存储
+// -------------------------------------------------------------------------------- //
 // uu小说下载data
 const uuks5NovelData = {
   'websiteName': 'UUks5',
   'startUrl': 'https://www.uuks5.com/book/781417/422378169.html',
   'preUrl': 'https://www.uuks5.com/book/781417/',
-  'EndUrl': 'https://www.uuks5.com/book/781417/422378215.html', // 调试用 为空就是下载全本；截止到某一章，就填哪一章的链接
-  'downloadedChaptersFile': 'chapters-downloaded-uu.json', // 已下载章节的记录文件
-  'bookName': '开局合欢宗-被师姐拿捏命脉-uuks5最新版.txt', // 书名
+  'endUrl': '', // 调试用 为空就是下载全本；截止到某一章，就填哪一章的链接
+  'downloadedChaptersFile': 'uuks5-chapters-downloaded.json', // 已下载章节的记录文件
+  'bookName': 'uuks5最新版-开局合欢宗-被师姐拿捏命脉.txt', // 书名
   'preText': `---------------------------------------------
-  Name:  《开局合欢宗，被师姐拿捏命脉》
-  Author:   咸鱼老白
-  Maker:    达不溜
-  Date:     2024-12-07
-  ---------------------------------------------
-  
-  `
+  Name:《开局合欢宗，被师姐拿捏命脉》
+  Author: 咸鱼老白
+  Maker&Coder: 达不溜
+  FixMessage: 
+  1. 逐字逐句对比，修复和谐文字/剧情，同时更新老白为某些章节打的最新补丁
+  2. 纠正错别字和与语句不通顺的地方
+  3. 恢复老白“特色”成语，懂的都懂，经典 心满意足->芯满溢足 
+  Date: 2025-01-02
+---------------------------------------------
+
+`,
+  'uuks5NetData': {
+    'customHeaders': {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0',
+      'Origin': 'https://www.uuks5.com',
+      'Referer': 'https://www.uuks5.com/',
+      'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
+      'Cookie':
+        '_gid=GA1.2.272840062.1735755641; _ga_XD24LCGMPV=GS1.1.1735755641.6.1.1735759939.0.0.0; _ga=GA1.2.1771271361.1732799149; _gat_gtag_UA_123139500_3=1; cf_clearance=kzF9tiIhTRSEoqce0.xtapOrpMDL1HRnTbrBtgFpyYA-1735759939-1.2.1.1-Q8h4KI4mBMQ_C95YQansXQ1HuiaV00WPAs7MN8DJehSBKXNYevam0xqItelRJKOpuTmtb8P4oJo734ke8rqRXaGgDxfdznu48veQLqg.0JyAf11_2pU5urV2eXNTCM9T901WYMQHpATBJ70vZGKThK4aP3SeCK0ZOwdkKhRuf6itPdNLfbZrVKyLwmyHu3WTkAfmmd2Jp9YNkjnqnZ2XRjxDA4.8ka.hQjggcsTMy8p_22wiAG3YLORMP3VnPEHj9Q2jK4VxbbcEInmejrqeXtT6usTtzwsSgzd_8LZCxWxMOXKT4AtKBI4.1L9ze.dXTP4h76IIopX7SJyEzSDgKX4hTdvsA98ip5pnI86m_z6HCUpcDPLa2e9NOta7viD9fuWP4wpj6.QMAjCi4_zOrSWjCbDxnxUwSMhZF_U_gOEAXYJyaYFwaWaWfH4EjHQDDumH0vbvvYHPJ5c6.m9JNQ'
+      // 添加其他需要的headers
+    }
+  }
 };
+
+// -------------------------------------------------------------------------------- //
 
 // 纵横data
 const zonghengNovelData = {
   'websiteName': '纵横中文网',
   'startUrl': 'https://read.zongheng.com/chapter/1286982/73595075.html', // 小说的起始URL
   'preUrl': 'https://read.zongheng.com',
-  'EndUrl': 'https://read.zongheng.com/chapter/1286982/73595078.html?', // 调试用 为空就是下载全本；截止到某一章，就填哪一章的链接 记得后面加问号
-  'bookName': '开局合欢宗-被师姐拿捏命脉-纵横最新版.txt',
-  'downloadedChaptersFile': 'data/chapters-downloaded-zongheng.json', // 已下载章节的记录文件
+  'endUrl': '', // 记得后面加问号 调试用 为空就是下载全本；截止到某一章，就填哪一章的链接
+  'bookName': '纵横最新版-开局合欢宗-被师姐拿捏命脉.txt',
+  'downloadedChaptersFile': 'zongheng-chapters-downloaded.json', // 已下载章节的记录文件
   'preText': `---------------------------------------------
-Name:  《开局合欢宗，被师姐拿捏命脉》
-Author:   咸鱼老白
-Maker:    达不溜
-Date:     2024-12-07
+  Name:《开局合欢宗，被师姐拿捏命脉》
+  Author: 咸鱼老白
+  Maker&Coder: 达不溜
+  FixMessage: 
+  1. 逐字逐句对比，修复和谐文字/剧情，同时更新老白为某些章节打的最新补丁
+  2. 纠正错别字和与语句不通顺的地方
+  3. 恢复老白“特色”成语，懂的都懂，经典 心满意足->芯满溢足 
+  Date: 2025-01-02
 ---------------------------------------------
 
 `,
   'zonghengNetData': {
     'customHeaders': {
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0',
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0',
       'Host': 'read.zongheng.com',
       'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
       'Referer': 'https://www.zongheng.com/',
-      'Cookie': `ZHID=B5762401A8ACE4E3EAEB08C2410A30A4; zh_visitTime=1731326880627; __zhpp=1E5C4D327CBADC53F40A792B2C6338C2; _c_WBKFRo=PHFm3y4Bm6ro0kmpbA5ZWeBMFEW4t15ub4uyAnuE; PassportCaptchaId=61d9c90e00784f699cc82315a4b63a62; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221930bfe323e581-033a12adbd38bd-4c657b58-2073600-1930bfe323f4b2%22%2C%22%24device_id%22%3A%221930bfe323e581-033a12adbd38bd-4c657b58-2073600-1930bfe323f4b2%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_referrer%22%3A%22%22%2C%22%24latest_referrer_host%22%3A%22%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%7D%7D; loginphone=18510410059; zhffr=0; Hm_lvt_c202865d524849216eea846069349eb9=1732106433,1732106778,1733022769,1733088313; HMACCOUNT=64E794DE6A0D3F1B; logon=MTA4MTk2%7CMA%3D%3D%7C%7C5Lmm5Y%2BLNzQwMTAxMDc%3D%7CdHJ1ZQ%3D%3D%7CMTgyODU5MDgxMw%3D%3D%7C9CB0635C12DA0BE79EF6D3988E932890; __logon__=MTA4MTk2%7CMA%3D%3D%7C%7C5Lmm5Y%2BLNzQwMTAxMDc%3D%7CdHJ1ZQ%3D%3D%7CMTgyODU5MDgxMw%3D%3D%7C9CB0635C12DA0BE79EF6D3988E932890; __zhs__=31c9a3edf8f7239e11aa705ac40ad68b2310c7a713e32d1d1a5475f946705a3f8e4969a944b0fd2c772aaaa2c9e79c4b53d6853cab5ab0e9c8c61bbc56e4976138ce1ecd2b8b9bcc378bffccd0deea50853b4c4336f29c1ace58b7f18b01fe7c7a1468a54f11658fa43b22ee581293baffe95a7be9f4e784e2ab2b6e97273bf514f3f59dfc2628488b657320f4dacdd23b05c0418d5ffbb31c64ab4ac1cc21ba63515cf23778de5f00309aeac663fb0e7cb294d6a78fca7a946cbb02c0ebe923c112f0d7e6235b916be6aa469e4da3fa61e415cd3e2c4d8a592be759c6fadcc63b297179304a4c590d7fa7cc1e6961ca954d45784c86901beefe99bffac68e63; __zhc__=30820122300d06092a864886f70d01010105000382010f003082010a028201010099080af13f1cb4f5f27a54d226dda81f7472545191c0ce8fcc5fd8d8430578406ffd2ac877ef40e70f5d0325658311b8ccd6c5d744b32e5a991b0a59fc76cba5982b0ce791ba845dcb7179eabafa154f702f85eb99af23dde7f7d17cef48857044772f98a9823625f946692e8dabfc523e6b67286166c5db958edbfcae074a71f3ad897a28faff0426114997b1ef8c9a68be234a84341ea210527b205b6a1aa32d56c23ae4fc754feeb2c464117d61af2dfdbb9ab31611fd31c09f6083736a855c5c033900689862f1fb10f6e7f2aa7e8a58f5bf267f715d2e9b16060fbef1ad36c2d543b5060158834df78b0d73fbf576bc2e06cb326c50907126c53f106bd30203010001; acw_tc=ac11000117331029837845903efda5d8c8974a0144be36b4b0234326888982; Hm_lpvt_c202865d524849216eea846069349eb9=1733103007`
+      'Cookie':
+        'ZHID=893DC9F832022E388CC7D9FABD1A4B61; zh_visitTime=1734087993847; __zhpp=325004D1BE403BFB86D5D2672AB28D6C; _c_WBKFRo=zGbTIW3v1IX5TN9zEv5giJrnIsRFvXmRxYGibg4t; loginphone=18510410059; zhffr=0; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%22191354962406c9-06572a15032596-4c657b58-1474560-1913549624112c0%22%2C%22%24device_id%22%3A%22191354962406c9-06572a15032596-4c657b58-1474560-1913549624112c0%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_referrer%22%3A%22%22%2C%22%24latest_referrer_host%22%3A%22%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%7D%7D; __zhct=9690071b1062c3830157621a4fbe7c82.1735760271763; acw_tc=2760820517357602825045134ea4cc02bbbe99dbdda9ff4220476ea0436896; PassportCaptchaId=9e70f9e3fe5e8300748f158b354f7854; Hm_lvt_c202865d524849216eea846069349eb9=1734087994,1735760283; HMACCOUNT=AFAAE246E78E90C3; logon=MTA4MTk2%7CMA%3D%3D%7C%7C6LSk5aa76Imv5q%2BN5a6L5bm86JaH%7CdHJ1ZQ%3D%3D%7CMTE0OTk2NDE4NQ%3D%3D%7C40917988440877A5250CD1A9D330615A; __logon__=MTA4MTk2%7CMA%3D%3D%7C%7C6LSk5aa76Imv5q%2BN5a6L5bm86JaH%7CdHJ1ZQ%3D%3D%7CMTE0OTk2NDE4NQ%3D%3D%7C40917988440877A5250CD1A9D330615A; __zhs__=1f1797facb0790ccaccfef9ebe0fd8d5c40e903c75bd60fbcac1b48b59b5195ce8ff1a743362a7195625db4f792d756c53b62d6fe3e4e661d56da90fa30271938dff8c4f7506069bf5e9b0792a15269eaa7adb6d6067ad33963b8dc02a3b9e9412c3531123a1988f303edf4459ef77fba849ef58ac9e82c1641dec32fa0b73150ca4448e3cd2b88b6d5ba3ed872515e6e1d821ca5b0c5a36e29f9205f26fc89dc2ff214273380b9f368663311fe1501efaa526892ea492f485d780453d6e7ecbbe7434ca3de7d516301a239f6ab563c2a4fc0716724b920088e76aee922f24109b55dcd7366593316983c9ff43cd81181191798a9b58ceb97889cb7e3f7c5a30; __zhc__=30820122300d06092a864886f70d01010105000382010f003082010a0282010100c6f1920371cac4ecb3fa35a26ae8805c222c74807e503b520f3ea34205aa3253898ada8dc0cfbf9abf288c356028712bae38554ebcee1131881c6a7ef347c21a0eb66e4f4420ce91a6a0a1ec6d27577f82aac1497901b222ccfc73cb919258b9a29e49fa4262598227abbf6f4d6dcaa9db76fea2f14116a99c18105883a9c3ef8abb014a9fc8880348ac05e2d8bee9693bcc315460e3b947189764acade665e1ef3c1f0d601e7aaa6834d2fba153566beb6908f853eccb36749375c1e7ab3175e42eb24c537b15b1ee535bf18142b2beec8c75776cf997c8f0a3b06fbeea80361f9ca4cd9b5ffa63994c311017d337a527e9de204d30462c6d4e5f110d3c1c0d0203010001; Hm_lpvt_c202865d524849216eea846069349eb9=1735760974'
       // 添加其他需要的headers
     },
     'eData': {
-      'words': [1984526157, 1731753044, 1832210022, 1684300389],
+      'words': [1665692260, 2019644492, 2053331304, 1497658947],
       'sigBytes': 16
     }
   }
 };
 // Aco账号：  [1246384471, 1480945736, 1900430969, 1816348501],
-// 全解锁账号 [1984526157, 1731753044, 1832210022, 1684300389]
+// 全解锁账号 [1665692260, 2019644492, 2053331304, 1497658947]
 
 module.exports = {
   uuks5NovelData,
