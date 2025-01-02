@@ -12,10 +12,12 @@ const uuks5NovelData = {
   Name:《开局合欢宗，被师姐拿捏命脉》
   Author: 咸鱼老白
   Maker&Coder: 达不溜
-  FixMessage: 
-  1. 逐字逐句对比，修复和谐文字/剧情，同时更新老白为某些章节打的最新补丁
+  Message: 
+  1. 逐字逐句对比，修复和谐的文字/剧情，同时更新老白为某些章节打的最新补丁
   2. 纠正错别字和与语句不通顺的地方
-  3. 恢复老白“特色”成语，懂的都懂，经典 心满意足->芯满溢足 
+  3. 恢复老白“特色”成语，懂的都懂，经典 心满意足->芯满溢足 等等
+  Warnning: 警告-老白写书也不容易，看txt并不能给老白带来任何收益！！！
+  这本只是融合修订版，我的要求是【只做收藏，请勿传播！】【只做收藏，请勿传播！】
   Date: 2025-01-02
 ---------------------------------------------
 
@@ -27,7 +29,7 @@ const uuks5NovelData = {
       'Referer': 'https://www.uuks5.com/',
       'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
       'Cookie':
-        '_gid=GA1.2.272840062.1735755641; cf_clearance=cJ0CxP6HXd2G7YqK.mCL3ef6ViSItX.OMCQv_28_Jqs-1735765800-1.2.1.1-paI3OG7yGcMJCcMyyAtZrYtO_hok2GUVYRHPjdaj9ZQm175cLSjV7aq.OJMrcwJVbY0YK5B8wHX8diPSQMQq3MBn7og_56lY3PF7aGSVE3NUrC77B0wFp8GNZAN3M5JapnjanEb8mWn.nHD4pX2sDJccmhGsObdFlQ7tKLzJInuTy3Y_jsgeyUJ24cxbtXWVC0g_l2tBuQp1EcyU7mYE1nDOcwHt9wMaDiEd64m8ffaxU6ZA.bkeoQREvm1eMCUjSz4i0S8zR_JVNL2OSbrku4IkgPazA1EO_Cj73kJ6kUx2u1nL_lVBZrwCEEU548k9oumv8zY_Pg5jLAKnCFYt0DaS9YSQP_5WSP8cOXDmsveLdF60cK562UnC9Yx4uBA2YBK0.Y40yiKk.w_FPNJjiZqt60oz2I_09_egS8YEDwTtbaXAB8.ffafGRZWtFB6A9SanVXPYX6yF.BVg5V82Tw; _gat_gtag_UA_123139500_3=1; _ga_XD24LCGMPV=GS1.1.1735765795.7.1.1735765800.0.0.0; _ga=GA1.1.1771271361.1732799149'
+        '_gid=GA1.2.272840062.1735755641; cf_clearance=smGxJ6PgYjskRGkKBWUfvc4xmV_BXB77_F2sQhbmo1s-1735767630-1.2.1.1-AAkEnlp7NH2c54cVl23vu8JZqPUZnhohZpuJHRJJ3BxXgXIgzSdYjYXjuJINprj8qejbmCCpsZ.VQh2ngjhGRFqhr2dXB91pc9t_Hb0A_M6DsQFnRPZv2HTTiTf8WvCzwPnmVzeAJ5pkudJ5ob9AzRtsWyYedECsioXKgrEItKxBvSGMijXGuWT3eOEYOczA_414dgDaoGPFC5bqmx5.mI9.qsy4GRoV_4RdhIRFzi6Y4WcajDarqL8usHDvKlXeF76mxn5ztxBdBhOc3Hg6qyFbsShhSI4TKjvS6z6NzBL2u_cQl9o71iaS8opOEmxVSnAKSPZ3qixwJ_O3xIjqvVS.wB6UbGErKQ4hFExC8zXcvWMTf8QmkjqH8OxjuFN0H9L8SIZUIpYJrqIwM7X0boNfFOSoGrOGvw93uzqVHPeiqY8BBP7fvdm2pGf60pJ07Eb6OigZIs8jG5Dh_h.1xw; _gat_gtag_UA_123139500_3=1; _ga_XD24LCGMPV=GS1.1.1735765795.7.1.1735767630.0.0.0; _ga=GA1.1.1771271361.1732799149'
       // 添加其他需要的headers
     }
   }
@@ -48,9 +50,11 @@ const zonghengNovelData = {
   Author: 咸鱼老白
   Maker&Coder: 达不溜
   FixMessage: 
-  1. 逐字逐句对比，修复和谐文字/剧情，同时更新老白为某些章节打的最新补丁
+  1. 逐字逐句对比，修复和谐的文字/剧情，同时更新老白为某些章节打的最新补丁
   2. 纠正错别字和与语句不通顺的地方
-  3. 恢复老白“特色”成语，懂的都懂，经典 心满意足->芯满溢足 
+  3. 恢复老白“特色”成语，懂的都懂，经典 心满意足->芯满溢足 等等
+  Warnning: 警告-老白写书也不容易，看txt并不能给老白带来任何收益！！！
+  这本只是融合修订版，我的要求是【只做收藏，请勿传播！】【只做收藏，请勿传播！】
   Date: 2025-01-02
 ---------------------------------------------
 
