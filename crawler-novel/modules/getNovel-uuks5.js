@@ -101,7 +101,7 @@ function saveToFile() {
     return;
   }
   // 每章之间用分隔符分隔
-  let novelContent = preText + allChaptersContent.map((i) => i + '\n\n---------------------------------------------\n\n').join('');
+  let novelContent = preText + allChaptersContent.map((i) => i + '\n\n------------------------------------\n\n').join('');
   fs.appendFileSync(saveNovelFilePath, novelContent, 'utf8');
 
   console.log(`------ 小说已更新！！！追加到 ${bookName}`);
