@@ -24,11 +24,10 @@ const uuks5NovelData = {
 `,
   'uuks5NetData': {
     'customHeaders': {
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0',
-      'Origin': 'https://www.uuks5.com',
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0',
       'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
       'Cookie':
-        '_gid=GA1.2.1379095898.1736823474; cf_clearance=GerG_hzARQFHsHHMIjFVU7J12_53gYBqaOBCtBFY.jI-1736840115-1.2.1.1-.Wgw7RHWg4EU5O0TPVxsoOhxkoBW1QGypRXwmGP5JqL7R89JyVrnpSX5VR30Pju8E_jIfCDlQRQTonN9HkVmQYBEq8B7KGhEp0bdsRNWbpuQ35VpnjPOVTPgSYWxfl3CXxLDQRyLI4V2EYKQxI09WLI5runyecE3bhg1U9aqK_I7SerzfWKEN6Hdz_._huI8d1RoRFHnj2xva0vwREQcbqsdOKXyRSko_vQ3VSc11j6FeRHEKqyTWQLirBxM4Ii6tnKa0XBlbN_uGIemb4s4V69fR906aaKVCwsvX2a8NPxSUS.5tZh9.Y32.oNMkxo4Sj3U0_5RpJ_mlwqFMO2sLQ; _gat_gtag_UA_123139500_3=1; _ga_XD24LCGMPV=GS1.1.1736840117.28.1.1736840121.0.0.0; _ga=GA1.1.1771271361.1732799149'
+        '_gid=GA1.2.1234112335.1737979046; _gat_gtag_UA_123139500_3=1; cf_clearance=1tTPIoB2XvH2avmhd1y3DwYa_vDvL4Sd2VxhVuJSuGw-1737990042-1.2.1.1-Eff0g0s4AAQXMWM1noqAjc.psRbcCT_EM9Axsx9CNM2bDCMrJB.8gAmkDBWH0m8uz4fFHQUAtDcV_XiuQW8bsBBE3EsT7D89zqKuA0leyRCtXjC_wpzCn5LTE7rQi3Ihy4biLbN46ZCLy0XjGe2NiX38EIwpydE_1OvmF4YpwOwMvLRfrE2ZC9rVsmrp_mcwlXeF6Sp89Sq7ND1UAetaANb8PAlrISWY35wfdAULltLchqlfaAbNezSu7XjVMcn3634ur7dHd8acOikQMLQ_mn3McBJMGpPDMqvuxgonUaMDyFi0JtP._Cn4Ctv1AQ86m_QhM3yjZuZicmAlE2kQZA; _ga_XD24LCGMPV=GS1.1.1737990045.41.1.1737990047.0.0.0; _ga=GA1.1.1771271361.1732799149'
       // 添加其他需要的headers
     }
   }
@@ -40,7 +39,7 @@ const uuks5NovelData2 = {
   'preUrl': 'https://www.uuks5.com/book/168017/',
   'endUrl': '', // 调试用 为空就是下载全本；截止到某一章，就填哪一章的链接
   'downloadedChaptersFile': 'uuks5-2-chapters-downloaded.json', // 已下载章节的记录文件
-  'bookName': 'uuks5最新版-偷香高手2.txt', // 书名
+  'bookName': 'uuks5最新版-偷香高手.txt', // 书名
   'preText': `------------------------------------------------
   Name:《偷香高手》
   Author: 六如和尚
@@ -58,7 +57,6 @@ const uuks5NovelData2 = {
   'uuks5NetData': {
     'customHeaders': {
       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0',
-      'Origin': 'https://www.uuks5.com',
       'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
       'Cookie':
         '_gid=GA1.2.1379095898.1736823474; PHPSESSID=s3hafgt14o27uhoc2nqu8e160l; cf_clearance=KWpSaw0igJd_FaIp_Duq7BIHtcfTbHYbjH.EG.X1K78-1736831717-1.2.1.1-T6IzxR4hg8tzYceDm_iTRxlWGt95ZEO0Hc2Hp15kyrZvr1fJoWEu5h_9MPha3hgq2SclMqzF64oGYlqeCx9Fm4fkuyrU1OEoRSIhiWPlYHoyG0rZ8IfMIh_sxg2Yo_mf0oJ3K6R3.mx7EuCbrl9P4x6jZvs.Cq9IIECyFfr4Ax_w66raMsfkDPjxAUJpmkewYuYD4ACJCGw9y6lCDk0nW6sS984wTl_d6quLBm8O_.2rleferT4PsZtXnq7UNHnfxwcylVFFUsXZDi.j7OcUlvGENF9e2QC_GNJ9NbDChlM.e92Hh7bZvHRw_Q0w3kQ2o0O55oJV9mfsf7XNksAA2A; _gat_gtag_UA_123139500_3=1; _ga_XD24LCGMPV=GS1.1.1736829253.26.1.1736831721.0.0.0; _ga=GA1.1.1771271361.1732799149'
