@@ -30,6 +30,9 @@ dist/
  
 # 忽略所有的 build 文件夹
 build/
+
+# music
+music/
  
 # 忽略所有的 coverage 文件夹
 coverage/
