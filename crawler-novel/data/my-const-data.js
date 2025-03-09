@@ -24,10 +24,10 @@ const uuks5NovelData = {
 `,
   'uuks5NetData': {
     'customHeaders': {
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0',
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0',
       'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
       'Cookie':
-        'cf_chl_rc_m=1; _gid=GA1.2.221676435.1741337374; _gat_gtag_UA_123139500_3=1; cf_clearance=acUNfMjQD.iasCYRPIzUsOdM.SigUpJmv5U5cQq7fz0-1741339899-1.2.1.1-YvBoCPHP6a8BjU17egj9U4ncTOfevoInOo_kYgnf73gPpNHnNw5Y.11HP6.6A10keXSkgHnjR9Ju8RsCGVp3mxGDjuooV4sapwL27OwvbCTZ_6JZirlUd8KHnEeEN052woBihuXhXekwBb5thxV9fMCFJC3u6EVQL2JnMLR2Zo21TnMWi5yQ8d6nqUevi32imid3AZ_pxp3UUa1.RwNLCCbbjdHI938Sm_7KHhVJ6tKq2CAcB.gb8UdEX3aqHLEpsBTm_x8U7rkXY0M2lX625ChKDVHFjcTVNhJ.0t6pZUmTbL74KOmVUbYB5BnATR5YOry6XfL_6iCKlWy3VFmwEJKUzjQgcaSp7tR5XszU.sf2RTRE5sNRiCelCBSr_U3fAkJhc6n1J6psrhCbTGFrbkVveq5Q6glMSaKFeZZtQBJqRx9f3TlmXOt0pndNUyFurgMCOdNaNHNFyRNEJiw9povuHYmyw0naju9mDhdlPEQ; _ga_XD24LCGMPV=GS1.1.1741339887.2.1.1741339899.0.0.0; _ga=GA1.1.1062819546.1741337374'
+        '_gid=GA1.2.1497024621.1741504884; cf_clearance=oFDXh8rkesU4LCq2ZgM999CsCYzhBvjldnKIVDJWFMw-1741504880-1.2.1.1-n8uqGZS43Uq5rUs1MRqXJSfOfHV5kdlGv00nanFv9WU09oA0LP010aA5PvQjnpQTxjmzzvch2MrrXhnn7h09uMT2qsW9uOMK6TYz9DUetCcNFKwQrzqP4Y4smMKtp6pClAADqtpPtTvPMHIrPKXc8msYeCei1uKbcjVyRFTpAj15HV8isYwelZrTFo3M3CxhTTf_tiDtz6PrMkEs_dmNTQafUP2.JvSnXo5qzmPcv579aP3ClXQmD.smNIexHnMAxJQApZ.HDiAc9M6sEX84NP_fRGi8jJ4FnGnfVvNDC1jGw3Fw.ZTHZcCfi95YJpXcQWUgqdMY_K5xtcUYwZ8KQuVNyuqnCaCEdWFhr27KeB5M6PIfgrssIJVt.ryw5foiAps5Cb7g0iYvqqvTEjyFh1cr0lpQ0NdUSlcOjIrWnybJzQdW8OWqkpzv22rp7v7mdPw5Hnwz4npVHyDE6JGHdpD_DV2YwR_ySxpo7v8sLgk; _gat_gtag_UA_123139500_3=1; _ga_XD24LCGMPV=GS1.1.1741504883.1.1.1741505128.0.0.0; _ga=GA1.1.1538759881.1741504883'
       // 添加其他需要的headers
     }
   }
